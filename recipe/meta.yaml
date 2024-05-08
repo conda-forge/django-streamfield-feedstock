@@ -1,5 +1,5 @@
 {% set name = "django-streamfield" %}
-{% set version = "2.1.2" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django-streamfield-{{ version }}.tar.gz
-  sha256: 6396bba7b0eb39709bc65d5db586feb197ef99bcd690a306c718d233bfd33bcb
+  sha256: bd960bf4676cd6050cc80de1ffd400010f47f277cadf68662a77e4dcea0b6af5
 
 build:
   noarch: python
