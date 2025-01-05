@@ -21,6 +21,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - django >=4.2
+    - setuptools
 
 test:
   imports:
