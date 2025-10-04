@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 schema_version: 1
 
 context:
   name: django-streamfield
-  version: 2.3.2
+  version: "2.3.2"
 
 package:
   name: ${{ name|lower }}
@@ -21,8 +22,9 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
+    - setuptools
   run:
-    - python >=${{ python_min }}
+    - python >=${{ python_min }},<4.0
     - django >=4.2
     - setuptools
 
@@ -31,12 +33,7 @@ tests:
       imports:
         - streamfield
       python_version: ${{ python_min }}.*
-  - requirements:
-      run:
-        - pip
-        - python ${{ python_min }}.*
-    script:
-      - pip check
+      pip_check: true
 
 about:
   summary: StreamField for native Django Admin or with Grappelli
